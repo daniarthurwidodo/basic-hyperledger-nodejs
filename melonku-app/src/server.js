@@ -6,10 +6,7 @@ const cors = require('cors');
 const morgan = require("morgan") //import morgan
 const {log} = require("mercedlogger") // import mercedlogger's log function
 const UserRouter = require("./user/user.controller.js") 
-// const unless = require('express-unless')
-// const auth = require('../server/helpers/jwt.js');
-// const users = require('../server/controllers/UserController.js')
-// const errors = require('../server/helpers/errorHandler.js')
+const MonitorRouter = require("./monitoring/monitor.controller.js") 
 
 //DESTRUCTURE ENV VARIABLES WITH DEFAULT VALUES
 const {PORT = 3000} = process.env
@@ -27,7 +24,9 @@ app.get("/", (req, res) => {
     res.send("this is the test route to make sure server is working")
 })
 
-app.use("/user", UserRouter) // send all "/user" requests to UserRouter for routing
+app.use("/user", UserRouter)
+app.use("/monitor", MonitorRouter)
+
 
 // db connection
 const { DATABASE_URL } = process.env 
