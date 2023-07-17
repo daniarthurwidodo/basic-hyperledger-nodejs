@@ -1,0 +1,44 @@
+MENU
+Logo
+———————————
+PP Admin
+———-———————-
+Dashboard
+———————————
+Monitoring suhu
+> Grafik Gudang Petani : grafik suhu perhari beserta rincian tabel suhu per hari, notif anomali beserta rincian tabelnya, ringkasan suhu rata2, suhu tertinggi dan terendah
+> Grafik Gudang Distributor : sama seperti petani 
+> Grafik Gudang Retail : sama seperti petani
+——————————————-
+Petani
+> Data Melon. Halaman sub menu data melon: 
+• tombol REGISTRASI MELON (supaya admin bisa registrasi melon juga, sesuaikan dgn di mobile) 
+• List data melon yang sudah di registrasi. Isi kolom tabel : ID Melon, Varietas, waktu tanam, waktu panen, jenis tanaman, jenis pupuk, Grade buah, Kuantitas, Action (Ada tombol [detail] pada kolom Action = Yang kalo di klik muncul halaman detail melon beserta barcodenya)
+> Transaksi Keluar Isi halaman sub menu Transaksi Keluar :
+• Tombol Tambah Transaksi Keluar, isinya inputan : Listbox data melon yang tersedia, Kuantitas, Harga, Lama Penyimpanan (autofill), Suhu (autofill), Penerima berupa listbox distributor yang terdaftar >> Popup Konfirmasi ulang data inputan >> Outputnya jangan lupa ada barcode yang bisa di download.
+• List Transaksi Keluar, isi kolomnya ID Transaksi, Nama Melon, Kuantitas, Harga, Lama Penyimpanan, Suhu, Penerima (Distributor), dan kolom Action (Ada tombol [detail] jika diklik menampilkan popup detail transaksi beserta barcode yang bisa di download. )
+———————————————
+Distributor
+> Data Melon isinya list data melon dari Menu Transaksi Masuk (inventory data melon untuk distributor)
+> Transaksi Masuk list transaksi masuk dengan isi kolomnya : IDtransaksi, Pengirim(Petani), Penerima (Distributor), Kuantitas, Harga Beli, Varietas, Grade, Tgl Tanam, Tgl Panen, Pupuk, Lama Penyimpanan, Suhu Rata-Rata, Status, Waktu Transaksi, Action (tombol [detail] berisi semua informasi transaksi beserta QRCode, Timeline Melon, dan Edit Status hanya untuk transaksi yang statusnya “tertunda”)
+> Transaksi Keluar Isi halaman sub menu Transaksi Keluar :
+• Tombol Tambah Transaksi Keluar, isinya inputan : Listbox data melon yang tersedia dari menu melon. Kuantitas, Harga, Lama Penyimpanan (autofill), Suhu (autofill), Penerima berupa listbox retail yang terdaftar. >> Popup Konfirmasi ulang data inputan >> Outputnya jangan lupa ada barcode yang bisa di download.
+• List Transaksi Keluar, isi kolomnya ID Transaksi, Nama Melon, Kuantitas, Harga, Lama Penyimpanan, Suhu, Penerima (Retail), dan kolom Action yang Ada tombol [detail] jika diklik menampilkan popup detail transaksi beserta barcode yang bisa di download. 
+—————————————
+Retail
+> Transaksi Masuk list transaksi masuk dengan isi kolomnya : IDtransaksi, Pengirim(Petani), Penerima (Distributor), Kuantitas, Harga Beli, Varietas, Grade, Tgl Tanam, Tgl Panen, Pupuk, Lama Penyimpanan, Suhu Rata-Rata, Status, Waktu Transaksi, Action (tombol [detail] berisi semua informasi transaksi beserta QRCode, Timeline Melon, dan Edit Status hanya untuk transaksi yang statusnya “tertunda”)
+> Tambah Transaksi
+Inputannya : Listbox data melon dari transaksi masuk, lama penyimpanan gudang retail - masuk showcase (autofill), tanggal pemindahan melon ke showcase, nomor rak, suhu, harga jual (kg). Noted: tdk ada perubahan barcode. 
+————————————
+Akun
+> Admin
+List admin isinya kolomnya : username, sandi, nama, email, nomor hp
+> User Mobile
+Listnya sesuai dgn di mobile. Ada kolom action yang ada tombol detail, yang jika di klik menampilkan informasi user dan untuk user yang butuh approval admin, bisa di approve pada halaman ini.
+
+
+*Note : *
+1. SUB MENU DITANDAI DENGAN simbol “>”
+2. Setiap transaksi beda IDTrx
+3. Sms warning system apabila ada anomali dan verifikasi approval bagi admin
+4. Petani dan Distributor berubah Id transaksi (Qrcode)nya, kalo retail tdk berubah tapi terupdate
