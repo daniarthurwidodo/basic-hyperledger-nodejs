@@ -79,6 +79,7 @@ exports.registerAndEnrollUser = async (caClient, wallet, orgMspId, userId, affil
 			affiliation: affiliation,
 			enrollmentID: userId,
 			role: 'client',
+			// add petani/distributor/ role
 		}, adminUser);
 
 		const enrollment = await caClient.enroll({

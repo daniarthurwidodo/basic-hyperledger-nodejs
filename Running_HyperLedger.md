@@ -24,8 +24,10 @@ Check your ~/.docker/config.json and replace "credsStore" by "credStore"
 ./network.sh up createChannel -ca -s couchdb 
 ./network.sh up createChannel -ca
 
-# deploy Chaincode / smartContract
+# destroy network
+./network.sh down
 
+# deploy Chaincode / smartContract
 ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-typescript/ -ccl typescript
 
 ./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-javascript/ -ccl javascript 
