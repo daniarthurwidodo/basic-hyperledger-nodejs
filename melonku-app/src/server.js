@@ -1,15 +1,16 @@
 require("dotenv").config() // load .env variables
-
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const morgan = require("morgan") //import morgan
 const {log} = require("mercedlogger") // import mercedlogger's log function
+
 const UserRouter = require("./user/user.controller.js") 
 const MonitorRouter = require("./monitoring/monitor.controller.js") 
+const MelonRouter = require("./melon/melon.controller.js") 
 
 //DESTRUCTURE ENV VARIABLES WITH DEFAULT VALUES
-const {PORT = 3000} = process.env
+const PORT = 4000;
 
 // Create Application Object
 const app = express()
@@ -26,6 +27,7 @@ app.get("/", (req, res) => {
 
 app.use("/user", UserRouter)
 app.use("/monitor", MonitorRouter)
+app.use("/melon", MelonRouter)
 
 
 // db connection
