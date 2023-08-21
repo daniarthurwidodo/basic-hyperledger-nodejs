@@ -1,0 +1,24 @@
+report progress blockchain :
+- install hyperledger : done
+- setup network : done
+- setup cca-client : done
+- integrasi chaincode : done
+- setup hyperledger network : done
+ 
+- setup nodejs client : done
+- setup mongodb db : done
+- setup rabbitmq : done
+- setup auth controller : done
+- integrasi auth controller dengan hyperledger : done
+
+- setup melon controller : done
+- integrasi melon controller ke hyperledger via rabbitmq ke mongodb : in progress
+- buat query  get all melon : to do
+
+- setup monitor controller : done
+- integrasi monitor controller via rabbitmq ke mongodb : done
+
+
+
+
+

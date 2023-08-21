@@ -7,7 +7,8 @@
 - docker
 
 install official docker
-install docker-composer via apt
+install docker-composer  version 2.20.*
+https://docs.docker.com/compose/install/linux/#install-the-plugin-manually
 
 
 Check your ~/.docker/config.json and replace "credsStore" by "credStore"
