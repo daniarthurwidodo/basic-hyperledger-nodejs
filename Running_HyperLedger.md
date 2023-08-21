@@ -23,6 +23,7 @@ Check your ~/.docker/config.json and replace "credsStore" by "credStore"
 
 # start network
 ./network.sh up createChannel -ca -s couchdb 
+./network.sh up 
 ./network.sh up createChannel -ca
 
 # destroy network
